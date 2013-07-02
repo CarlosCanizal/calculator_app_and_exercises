@@ -10,11 +10,11 @@ puts "=> The second number was #{num2}, and the class is #{num2.class}"
 operations = ["add", "substrac", "divide", "multiply"]
 operators = {"add"=>"+", "substrac"=>"-", "divide"=>"/", "multiply"=>"*"}
 
-operation_valid = false
-while operation_valid == false
+operation_valid = true
+while operation_valid == true
 	puts "=> What operation would you like to perform? 1) add 2) subtract 3) divide 4) multiply"
 	operation = (gets.chomp.to_i)-1
-	operation_valid = operation > 0 && operation < operations.length
+	operation_valid = operations[operation].nil?
 end
 
 operation = operations[operation]
